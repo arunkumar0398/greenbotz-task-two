@@ -6,4 +6,9 @@
   display: block;
   padding: 5px 0;
   margin-bottom: 10px;
+
+  &-count{
+    display: inline-block;
+    margin-left: 5px;
+  }
 }
