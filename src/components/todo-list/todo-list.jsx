@@ -13,9 +13,12 @@ export const TodoList = () => {
 
   const toggleCheck = (id) => {
     // Fix an ability to toggle task
-    // setTodos(todos.map((todo) =>
-    //   todo.id === id ? { ...todo, checked: !todo.checked } : todo
-    // ));
+    setTodos(todos.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, checked: !todo.checked };
+      }
+      return todo;
+    }));
   };
 
   const handleKeyUp = (e, id) => {
